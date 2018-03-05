@@ -18,7 +18,7 @@ val data12_16=selectedData3.filter(line => (line < 17 & line>12)).map(line=>("12
 val data16_20=selectedData3.filter(line => (line < 21 & line>16)).map(line=>("16_20",1)).reduceByKey(_+_)
 val data20_24=selectedData3.filter(line => (line < 25 & line>20)).map(line=>("20_24",1)).reduceByKey(_+_)
 val data_all=data0_4.union(data4_8).union(data8_12).union(data12_16).union(data16_20).union(data20_24)
-data_all.saveAsTextFile("./out_question2")
+data_all.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question2")
 print("Q2: ")
 print(System.currentTimeMillis - debut2)
 print(" ms")

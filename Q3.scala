@@ -1,6 +1,7 @@
 import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
 import org.apache.spark.mllib.linalg.Vectors
 import scala.util.Try
+val debut3 = System.currentTimeMillis();
 val data =sc.textFile("Z:/Doc/Cours/progDev/Perrin/datamin.csv")
 val cleanData = data.map(line => {
     val splitedLine = line.split(",")
@@ -21,6 +22,8 @@ val clusterCountDesc = assignedData.map(t => (t, 1)).reduceByKey(_ + _).sortBy(_
 val clusterCountAsc = assignedData.map(t => (t, 1)).reduceByKey(_ + _).sortBy(_._2,true)
 val troisP = clusterCountDesc.take(3)
 val troisM=clusterCountAsc.take(3)
-val finalAffectation = preData.cartesian(l_cluster_assignment)
-troisM.saveAsTextFile("./out_question3_M")
-troisP.saveAsTextFile("./out_question3_P")
+clusterCountDesc.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question3_M")
+clusterCountAsc.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question3_P")
+print("Q3: ")
+print(System.currentTimeMillis - debut3)
+print(" ms")

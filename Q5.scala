@@ -1,5 +1,5 @@
 val debut5 = System.currentTimeMillis();
-val data =sc.textFile("Z:/Doc/Cours/progDev/Perrin/datamin.csv")
+val data =sc.textFile("Z:/Doc/Cours/progDev/Perrin/data.csv")
 val mappedData =data.map(line => line.split(","))
 val selectedData =mappedData.map(line=> (line(2)))
 val mappedData2=selectedData.map(line => line.split(" "))
@@ -13,3 +13,4 @@ sortedData.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question5")
 print("Q5: ")
 print(System.currentTimeMillis - debut5)
 print(" ms")
+Q5:8627 ms

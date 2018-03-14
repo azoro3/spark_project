@@ -1,5 +1,5 @@
 val debut4 = System.currentTimeMillis();
-val data =sc.textFile("Z:/Doc/Cours/progDev/Perrin/datamin.csv")
+val data =sc.textFile("Z:/Doc/Cours/progDev/Perrin/data.csv")
 val splittedData = data.map(line => {
     val splitedLine = line.split(",")
     val splittedArrayLength = splitedLine.length
@@ -11,3 +11,4 @@ mappedData.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question4")
 print("Q4: ")
 print(System.currentTimeMillis - debut4)
 print(" ms")
+Q4:23866 ms

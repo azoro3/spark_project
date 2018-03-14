@@ -2,7 +2,7 @@ import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
 import org.apache.spark.mllib.linalg.Vectors
 import scala.util.Try
 val debut3 = System.currentTimeMillis();
-val data =sc.textFile("Z:/Doc/Cours/progDev/Perrin/datamin.csv")
+val data =sc.textFile("Z:/Doc/Cours/progDev/Perrin/data.csv")
 val cleanData = data.map(line => {
     val splitedLine = line.split(",")
     val splittedArrayLength = splitedLine.length
@@ -27,3 +27,5 @@ clusterCountAsc.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question3_P")
 print("Q3: ")
 print(System.currentTimeMillis - debut3)
 print(" ms")
+scala> print("Q3: ")
+Q3:151854 ms

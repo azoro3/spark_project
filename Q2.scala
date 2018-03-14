@@ -22,3 +22,4 @@ data_all.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question2")
 print("Q2: ")
 print(System.currentTimeMillis - debut2)
 print(" ms")
+Q2:75135 ms

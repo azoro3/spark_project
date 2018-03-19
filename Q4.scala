@@ -8,7 +8,4 @@ val splittedData = data.map(line => {
 val filteredData = splittedData.filter(t => (t._1.equals("true")))
 val mappedData = filteredData.map(line => (line,1)).reduceByKey(_+_)
 mappedData.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question4")
-print("Q4: ")
-print(System.currentTimeMillis - debut4)
-print(" ms")
 Q4:55500 ms

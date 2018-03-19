@@ -24,8 +24,4 @@ val troisP = clusterCountDesc.take(3)
 val troisM=clusterCountAsc.take(3)
 clusterCountDesc.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question3_M")
 clusterCountAsc.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question3_P")
-print("Q3: ")
-print(System.currentTimeMillis - debut3)
-print(" ms")
-scala> print("Q3: ")
 Q3:151854 ms

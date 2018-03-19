@@ -10,7 +10,4 @@ val reducedData =selectedData3.reduceByKey(_+_)
 val sortedData =reducedData.sortBy(_._2,false)
 val res=sortedData.take(3)
 sortedData.saveAsTextFile("Z:/Doc/Cours/progDev/Perrin/out_question5")
-print("Q5: ")
-print(System.currentTimeMillis - debut5)
-print(" ms")
 Q5:8627 ms
